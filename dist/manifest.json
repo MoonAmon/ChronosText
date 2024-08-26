@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Snippets Sup",
+  "version": "1.0",
+  "description": "Adiciona um atalho para texto salvos.",
+  "permissions": ["activeTab", "storage"],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+
+  "content_scripts" : [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["main.js", "input-controller.js"]
+    }
+  ]
+}
